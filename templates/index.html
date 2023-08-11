@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Savaş Simülasyonu</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Savaş Simülasyonu</h1>
+    </header>
+
+    <div class="container">
+        <form method="POST" action="/">
+            <label for="karakter">Karakterinizi seçin:</label>
+            <select id="karakter" name="karakter">
+                <optgroup label="İyi Karakterler">
+                    <option value="1">Manwe</option>
+                    <option value="2">Gandalf</option>
+                    <option value="3">Elrond</option>
+                </optgroup>
+                <optgroup label="Kötü Karakterler">
+                    <option value="4">Melkor</option>
+                    <option value="5">Sauron</option>
+                    <option value="6">Nazgul</option>
+                </optgroup>
+            </select>
+            <button type="submit">Savaşa Başla</button>
+        </form>
+    </div>
+</body>
+</html>

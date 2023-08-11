@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Savaş Sonucu</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Savaş Sonucu</h1>
+    </header>
+
+    <div class="container">
+        <p><h3>Kazanan: {{ kazanan }}</h3></p>
+        <p>Saldırı Gücü: {{ saldiri1 }}</p>
+        <p>Kalan Can: {{ kalanCan }}</p>
+        <p>Kalan Büyü Sayısı: {{ kalanBuyu }}</p>
+        <p><h3>Kaybeden: {{ kaybeden }}</h3></p>
+        <p>Saldırı Gücü: {{ saldiri2 }}</p>
+        <p>Kalan Can: {{ kaybedenCan }}</p>
+        <p>Kalan Büyü Sayısı: {{ kaybedenBuyu }}</p>
+        <a href="http://127.0.0.1:5000/">
+        <button>Savaş Simülasyonunu Yeniden Başlat</button>
+        </a>
+        {% if kazanan == "Manwe" %}
+            <img src="{{ url_for('static', filename='manwe.jpg') }}" alt="Manwe Resmi">
+        {% elif kazanan == "Gandalf" %}
+            <img src="{{ url_for('static', filename='gandalf.jpg') }}" alt="Gandalf Resmi">
+        {% elif kazanan == "Elrond" %}
+            <img src="{{ url_for('static', filename='elrond.jpg') }}" alt="Elrond Resmi">
+        {% elif kazanan == "Melkor" %}
+            <img src="{{ url_for('static', filename='melkor.jpg') }}" alt="Melkor Resmi">
+        {% elif kazanan == "Sauron" %}
+            <img src="{{ url_for('static', filename='sauron.jpg') }}" alt="Sauron Resmi">
+        {% elif kazanan == "Nazgul" %}
+            <img src="{{ url_for('static', filename='nazgul.jpg') }}" alt="Nazgul Resmi">
+        {% endif %}
+    </div>
+</body>
+</html>
