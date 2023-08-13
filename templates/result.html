@@ -8,30 +8,28 @@
     <header>
         <h1>Savaş Sonucu</h1>
     </header>
-
     <div class="container">
-        <p><h3>Kazanan: {{ kazanan }}</h3></p>
-        <p>Saldırı Gücü: {{ saldiri1 }}</p>
-        <p>Kalan Can: {{ kalanCan }}</p>
-        <p>Kalan Büyü Sayısı: {{ kalanBuyu }}</p>
-        <p><h3>Kaybeden: {{ kaybeden }}</h3></p>
-        <p>Saldırı Gücü: {{ saldiri2 }}</p>
-        <p>Kalan Can: {{ kaybedenCan }}</p>
-        <p>Kalan Büyü Sayısı: {{ kaybedenBuyu }}</p>
+        <p><h3>Kazanan: {{ winner }}</h3></p>
+        <p>Saldırı Gücü: {{ attack1 }}</p>
+        <p>Kalan Can: {{ winnerHealth }}</p>
+        <p>Kalan Büyü Sayısı: {{ winnerMagic }}</p>
+        <p><h3>Kaybeden: {{ loser }}</h3></p>
+        <p>Saldırı Gücü: {{ attack2 }}</p>
+        <p>Kalan Can: {{ loserHealth }}</p>
+        <p>Kalan Büyü Sayısı: {{ loserMagic }}</p>
         <a href="http://127.0.0.1:5000/">
         <button>Savaş Simülasyonunu Yeniden Başlat</button>
-        </a>
-        {% if kazanan == "Manwe" %}
+        {% if winner == "Manwe" %}
             <img src="{{ url_for('static', filename='manwe.jpg') }}" alt="Manwe Resmi">
-        {% elif kazanan == "Gandalf" %}
+        {% elif winner == "Gandalf" %}
             <img src="{{ url_for('static', filename='gandalf.jpg') }}" alt="Gandalf Resmi">
-        {% elif kazanan == "Elrond" %}
+        {% elif winner == "Elrond" %}
             <img src="{{ url_for('static', filename='elrond.jpg') }}" alt="Elrond Resmi">
-        {% elif kazanan == "Melkor" %}
+        {% elif winner == "Melkor" %}
             <img src="{{ url_for('static', filename='melkor.jpg') }}" alt="Melkor Resmi">
-        {% elif kazanan == "Sauron" %}
+        {% elif winner == "Sauron" %}
             <img src="{{ url_for('static', filename='sauron.jpg') }}" alt="Sauron Resmi">
-        {% elif kazanan == "Nazgul" %}
+        {% elif winner == "Nazgul" %}
             <img src="{{ url_for('static', filename='nazgul.jpg') }}" alt="Nazgul Resmi">
         {% endif %}
     </div>

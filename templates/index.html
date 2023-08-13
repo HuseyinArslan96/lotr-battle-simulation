@@ -11,8 +11,8 @@
 
     <div class="container">
         <form method="POST" action="/">
-            <label for="karakter">Karakterinizi seçin:</label>
-            <select id="karakter" name="karakter">
+            <label for="character">Karakterini seç:</label>
+            <select id="character" name="character">
                 <optgroup label="İyi Karakterler">
                     <option value="1">Manwe</option>
                     <option value="2">Gandalf</option>
@@ -24,8 +24,26 @@
                     <option value="6">Nazgul</option>
                 </optgroup>
             </select>
-            <button type="submit">Savaşa Başla</button>
-        </form>
+            <form method="POST" action="/">
+                <label for="enemy">Düşmanını seç:</label>
+                <select id="enemy" name="enemy">
+                    <optgroup label="İyi Karakterler">
+                        <option value="1">Manwe</option>
+                        <option value="2">Gandalf</option>
+                        <option value="3">Elrond</option>
+                    </optgroup>
+                    <optgroup label="Kötü Karakterler">
+                        <option value="4">Melkor</option>
+                        <option value="5">Sauron</option>
+                        <option value="6">Nazgul</option>
+                    </optgroup>
+                </select>
+            <button type="submit">Savaşa Başla</button>       
+        </form>        
+    </form>
+    <div class="ring">
+    <img src="{{ url_for('static', filename='onering.jpg') }}" alt="Tek Yüzük">
     </div>
+</div>
 </body>
 </html>

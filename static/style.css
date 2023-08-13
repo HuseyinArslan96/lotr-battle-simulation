@@ -74,8 +74,23 @@ button:hover {
 }
 
 img {
-    border: 2px solid #0c0b0b;
-    border-radius: 5px;
+    /* border: 2px solid #0c0b0b;
+    border-radius: 5px; */
     margin: 10px auto;
     display: block;
+}
+
+.ring {
+    padding: 2rem 2rem;
+    display: block;
+    animation: rotateRing 10s linear infinite;
+}
+
+@keyframes rotateRing {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
